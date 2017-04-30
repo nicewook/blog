@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on JustHS</title>
-    <link>https://nicewook.github.io/blog/tags/</link>
+    <link>https://nicewook.github.io/blog/tags.html</link>
     <description>Recent content in Tags on JustHS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
