@@ -3,6 +3,11 @@ languageCode = "en-us"
 title = "JustHS"
 theme = "hugo-steam-theme"
 publishDir = "docs"
+
+relativeURLs = "true"
+uglyURLs = "true"
+canonifyURLs = "true"  # changes to absolute URLs
+
 disqusShortname = "nicewook-github-io"
 paginate = 10
 

@@ -2,12 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nicewook.github.io/blog/post/hugo-meets-ghpages/</loc>
+    <lastmod>2017-04-30T11:55:54+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nicewook.github.io/blog/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://nicewook.github.io/blog/</loc>
+    <lastmod>2017-04-30T11:55:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nicewook.github.io/blog/post/</loc>
+    <lastmod>2017-04-30T11:55:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   

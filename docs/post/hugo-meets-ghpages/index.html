@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>hugo meets ghpages &middot; JustHS</title>
+    <meta name="author" content="Jeong Hyunseok">
+    <meta name="description" content="JustHS blog">
+    <meta name="generator" content="Hugo 0.20.6" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="https://nicewook.github.io/blog/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://nicewook.github.io/blog/css/screen.css">
+    <link rel="stylesheet" href="https://nicewook.github.io/blog/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    
+
+    
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #3498db;}
+    .pagination a {color: #3498db;}
+    .gist .gist-file .gist-meta a:visited {color: #3498db !important;}
+    a:focus, a:hover {color: #2079b4;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #2079b4;}
+    .older-posts:hover, .newer-posts:hover {color: #2079b4;}
+</style>
+</head>
+
+<body class="home-template">
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="https://nicewook.github.io/blog/">JustHS</a></h1>
+	
+	
+	<h1 class="blog-subtitle">software development</h1>
+	
+</header>
+    
+    
+    <main class="content" role="main">
+    
+<article class="post">
+    <header>
+        <h1 class="post-title">hugo meets ghpages</h1>
+        <div class="post-meta">
+            <time datetime="30 April 2017">
+                30 April 2017
+            </time>
+        </div>
+    </header>
+
+    <section class="post-content">
+        
+
+<h1 id="overview">Overview</h1>
+
+<p>hugo와 github page로 블로그를 만들어보자</p>
+
+<pre><code>1. hugo
+    - static site generator. markdown 문서를 html로 바꿔준다고 생각하자
+    - theme을 생성하거나 적용할 수 있으며, local 에서 블로그를 동작시켜 볼 수 있다
+
+2. github page
+    - github에 repository를 만들어 github page, 즉 블로그로 이용할 수 있다.
+
+3. hugo meets github
+    - hugo로 생성한 블로그를 git을 사용하여 github page에 올리고 관리한다
+</code></pre>
+
+<h1 id="process">Process</h1>
+
+<h2 id="hugo-설치">Hugo 설치</h2>
+
+<pre><code>1. [hugo](https://gohugo.io/) 에서 hugo를 다운로드 한 다음
+
+2. 아래와 같이 폴더를 구성하고 bin 폴더에 다운로드한 파일을 넣어둔다
+    ![](/img/hugo-meets-ghpages/img1.png)
+
+3. windows 환경변수의 PATH에 hugo 실행파일의 위치를 추가한다. 
+    - 위의 경우는 M:\Hugo\bin 이 된다. 
+</code></pre>
+
+<h2 id="site-생성">Site 생성</h2>
+
+<pre><code>local에 블로그를 생성한다고 생각하자
+
+1. site 생성
+    - hugo new site JustHS
+        ![](/img/hugo-meets-ghpages/img2.png)
+
+    - 아래와 같이 JustHS 라는 폴더와 하위 폴더, 파일들이 생성된다.
+        ![](/img/hugo-meets-ghpages/img3.png)
+
+
+2. theme
+    - JustHS 에서 사용할 
+</code></pre>
+
+    </section>
+
+    
+    <section class="post-tags" style="padding-bottom:60px;">
+        <div class="post-meta tags">
+            <i class="fa fa-fw fa-tag"></i>
+            
+        </div>
+    </section>
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'nicewook-github-io';
+    var disqus_identifier = 'https:\/\/nicewook.github.io\/blog\/post\/hugo-meets-ghpages\/';
+    var disqus_title = 'hugo meets ghpages';
+    var disqus_url = 'https:\/\/nicewook.github.io\/blog\/post\/hugo-meets-ghpages\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <section class="share">
+    <p class="backtotop"><a data-scroll href="#site-head"><i class="fa fa-lg fa-fw fa-angle-double-up"></i></a><a data-scroll class="backtotoptext" href="#site-head"> Back to top</a></p>
+    <p class="info prompt">Share</p>
+    <a href="http://twitter.com/share?text=hugo%20meets%20ghpages&url=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fhugo-meets-ghpages%2f" title="Share on Twitter"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="fa fa-2x fa-fw fa-twitter-square"></i> <span class="hidden">Twitter</span>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fhugo-meets-ghpages%2f" title="Share on Facebook"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <i class="fa fa-2x fa-fw fa-facebook-square" style="margin-left: -8px"></i> <span class="hidden">Facebook</span>
+    </a>
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fhugo-meets-ghpages%2f" title="Share on Google+"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <i class="fa fa-2x fa-fw fa-google-plus-square" style="margin-left: -8px"></i> <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    <footer class="post-footer">
+        <section class="author">
+    <div class="authorimage" style="background: url(https://nicewook.github.io/blog/img/avatar.jpg)"></div>
+    <h4>Jeong Hyunseok</h4>
+    <p class="bio"></p>
+    <p class="meta">
+      
+    </p>
+</section>
+    </footer>
+    
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </section>
+
+		<section class="copyright">&copy; 2017 <a href="https://nicewook.github.io/blog/">Jeong Hyunseok</a>. Released under the MIT license.</section>
+	</div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://nicewook.github.io/blog/js/index.js"></script>
+<script src="https://nicewook.github.io/blog/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>
