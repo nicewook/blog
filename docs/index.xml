@@ -7,19 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Released under the MIT license.</copyright>
-    <lastBuildDate>Sun, 30 Apr 2017 11:55:54 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 01 May 2017 02:16:56 +0900</lastBuildDate>
     
 	<atom:link href="https://nicewook.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hugo meets ghpages</title>
-      <link>https://nicewook.github.io/blog/post/hugo-meets-ghpages/</link>
-      <pubDate>Sun, 30 Apr 2017 11:55:54 +0900</pubDate>
+      <title>hugo meets github pages</title>
+      <link>https://nicewook.github.io/blog/post/hugo-meets-ghpages.html</link>
+      <pubDate>Mon, 01 May 2017 02:16:56 +0900</pubDate>
       
-      <guid>https://nicewook.github.io/blog/post/hugo-meets-ghpages/</guid>
-      <description>Overview hugo와 github page로 블로그를 만들어보자
-1. hugo - static site generator. markdown 문서를 html로 바꿔준다고 생각하자 - theme을 생성하거나 적용할 수 있으며, local 에서 블로그를 동작시켜 볼 수 있다 2. github page - github에 repository를 만들어 github page, 즉 블로그로 이용할 수 있다. 3. hugo meets github - hugo로 생성한 블로그를 git을 사용하여 github page에 올리고 관리한다  Process Hugo 설치 1. [hugo](https://gohugo.io/) 에서 hugo를 다운로드 한 다음 2.</description>
+      <guid>https://nicewook.github.io/blog/post/hugo-meets-ghpages.html</guid>
+      <description>hugo와 github pages로 블로그를 만들어보자
+ git과 github, 그리고 github pages에 대한 설명은 이 post에선 다루지 않는다. 참고: github pages guide  Overview  hugo
+ tatic site generator. markdown 문서를 html로 바꿔준다고 생각하자 theme을 생성하거나 적용할 수 있으며, local 에서 블로그를 동작시켜 볼 수 있다  github pages
+ github에 repository를 만들어 github pages, 즉 블로그로 이용할 수 있다.  hugo meets github pages
+ hugo로 생성한 블로그를 git을 사용하여 github pages 에 올리고 관리한다   Process 1.</description>
     </item>
     
   </channel>

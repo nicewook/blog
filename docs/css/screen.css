@@ -44,9 +44,9 @@ p,
 li,
 dt,
 dd {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 100;
-  line-height: 28px;
+  line-height: 18px;
 }
 dt {
   font-weight: 400;
@@ -107,7 +107,7 @@ a.archive-link,
 .article-nav,
 .terms-list {
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 800px;
   width: 90%;
 }
 #site-head img {

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>hugo meets github pages &middot; JustHS</title>
+    <meta name="author" content="Jeong Hyunseok">
+    <meta name="description" content="JustHS blog">
+    <meta name="generator" content="Hugo 0.20.6" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="https://nicewook.github.io/blog/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://nicewook.github.io/blog/css/screen.css">
+    <link rel="stylesheet" href="https://nicewook.github.io/blog/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    
+
+    
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #3498db;}
+    .pagination a {color: #3498db;}
+    .gist .gist-file .gist-meta a:visited {color: #3498db !important;}
+    a:focus, a:hover {color: #2079b4;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #2079b4;}
+    .older-posts:hover, .newer-posts:hover {color: #2079b4;}
+</style>
+</head>
+
+<body class="home-template">
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="https://nicewook.github.io/blog/">JustHS</a></h1>
+	
+	
+	<h1 class="blog-subtitle">software development</h1>
+	
+</header>
+    
+    
+    <main class="content" role="main">
+    
+<article class="post">
+    <header>
+        <h1 class="post-title">hugo meets github pages</h1>
+        <div class="post-meta">
+            <time datetime="01 May 2017">
+                01 May 2017
+            </time>
+        </div>
+    </header>
+
+    <section class="post-content">
+        
+
+<hr />
+
+<p>hugo와 github pages로 블로그를 만들어보자</p>
+
+<ul>
+<li>git과 github, 그리고 github pages에 대한 설명은 이 post에선 다루지 않는다.</li>
+<li>참고: github pages guide</li>
+</ul>
+
+<hr />
+
+<h1 id="overview">Overview</h1>
+
+<ol>
+<li><p>hugo</p>
+
+<ul>
+<li>tatic site generator. markdown 문서를 html로 바꿔준다고 생각하자</li>
+<li>theme을 생성하거나 적용할 수 있으며, local 에서 블로그를 동작시켜 볼 수 있다</li>
+</ul></li>
+
+<li><p>github pages</p>
+
+<ul>
+<li>github에 repository를 만들어 github pages, 즉 블로그로 이용할 수 있다.</li>
+</ul></li>
+
+<li><p>hugo meets github pages</p>
+
+<ul>
+<li>hugo로 생성한 블로그를 git을 사용하여 github pages 에 올리고 관리한다</li>
+</ul></li>
+</ol>
+
+<h1 id="process">Process</h1>
+
+<h2 id="1-hugo-설치">1. Hugo 설치</h2>
+
+<ol>
+<li>hugo homepage 에서 hugo를 다운로드 한 다음</li>
+
+<li><p>아래와 같이 폴더를 구성하고 bin 폴더에 다운로드한 파일을 넣어둔다 </p></li>
+
+<li><p>windows 환경변수의 PATH에 hugo 실행파일의 위치를 추가한다.</p>
+
+<ul>
+<li>위의 경우는 M:\Hugo\bin 이 된다.</li>
+</ul></li>
+</ol>
+
+<h2 id="2-site-생성">2. Site 생성</h2>
+
+<pre><code>• local에 블로그를 생성한다고 생각하자
+1. site 생성
+    - hugo new site JustHS 
+
+    - 아래와 같이 JustHS 라는 폴더와 하위 폴더, 파일들이 생성된다. 
+
+2. theme
+    - JustHS 에서 사용할 theme을 골라서 설치한다
+    - 여기서는 hugo-steam-theme을 골랐다.
+        § hugo-steam-theme github
+        § hugo-steam-theme demo
+        § git clone 후 hugo-steam-theme 폴더의 .git 폴더는 삭제하였다 
+
+    - 현 시점에서 JustHS site (혹은, 블로그)가 생성되었다고 생각하자
+    - 아래 빨간 사각형 부분이 JustHS site 이며 우리는 이부분만을 git 으로 관리할 것이다 
+
+    - JustHS 폴더의 config.toml 파일은 이 site에 대한 설정파일로 보면 된다.
+        § 세부 설정, 수정은 잠시후 살펴보며
+        § 우선은 hugo-steam-theme에서 제공하는 config.toml 을 가져다 덮어쓰자
+3. 현 시점에서의 간단한 동작 확인
+    - hugo server를 실행하면 site가 생성되고, local server, 즉, 내 컴퓨터에서 볼 수 있다
+    - 안내되는 주소로 브라우저에서 볼 수 있다. 
+     
+</code></pre>
+
+<ol>
+<li><p>Github repository
+• Repository 생성
+    - 본인의 github에 repository 생성. 여기서는 blog 라고 생성하였다. </p>
+
+<pre><code>- repository 주소는 다음과 같다 
+</code></pre></li>
+
+<li><p>Hugo meets Github pages
+• hugo로 생성한 site를 github에 올려보자
+1) config.toml 설정하기
+• JustHS 폴더에 있는 config.toml을 조금 변경해준다
+    - baseurl
+        § <a href="http://username.github.io/blog/">http://username.github.io/blog/</a>
+        § 생성한 site의 최상위 폴더라고 생각하자
+    - theme
+        § hugo-steam-theme
+    - publishDir
+        § hugo는 default로 public 폴더에 블로그 내용을 생성한다.
+        § 이를 github page에서 지원하는 docs 폴더 로 변경해주자
+        § 댓글을 달 수 있는 disqus 설정은 다루지 않는다. disqusShorname을 할당받아 적어주면 된다 </p></li>
+</ol>
+
+<p>중요한 개념
+    • site 최상위는 JustHS라는 폴더이고, 이 폴더와 모든 하위 폴더를 github의 blog repository에 올려둔다
+    • 하지만 우리가 hugo로 생성하는, 웹상에서 보여질 내용은 /docs 폴더에 생성되며
+    • github pages는 /docs 폴더의 내용을 보여줄 것이다.
+2) hugo로 site 생성
+    • JustHS 폴더에서 hugo 실행 </p>
+
+<pre><code>• config.toml에서 설정한대로 docs 폴더에 생성된다 
+</code></pre>
+
+<p>3) site를 git으로 관리하자
+    • 여기까지는 local 에서의 git 관리이며, 이후 github의 repository와 연동될 것이다
+    • 아래와 같은 명령으로 JustHS 폴더가 local에서 git으로 관리된다 </p>
+
+<p>4) github repository와 연동
+    • JustHS 폴더에서 아래를 실행한다
+    • git remote add origin <a href="https://github.com/nicewook/blog.git">https://github.com/nicewook/blog.git</a>
+        - 원격 저장소를 추가하고 origin이라 부르겠다는 의미
+    • git pull origin master &ndash;allow-unrelated-histories
+        - github 저장소의 변경사항을 local로 가져온다.
+        - 두 git의 base가 같지 않아 생기는 fatal: refusing to merge unrelated histories 문제 해결을 위해 &ndash;allow-unrelated-histories 옵션을 붙임
+    • git push origin master
+        - github의 blog repository로 local에서 생성한 JustHS site를 push한다
+5) Github pages 설정
+    • push를 통해 github의 blog repository에 JustHS site가 올라간 상태
+    • 따라서, /docs 폴더역시 있다.
+    • 이 폴더를 github pages 에서 보여줄 source로 설정한다 </p>
+
+<pre><code>• 브라우저에서 http://username.github.io/blog 를 열면 블로그가 실행된다.
+</code></pre>
+
+<p>todolist
+[ ] first posting
+[ ] custom domains
+[ ] add categories</p>
+
+    </section>
+
+    
+    <section class="post-tags" style="padding-bottom:60px;">
+        <div class="post-meta tags">
+            <i class="fa fa-fw fa-tag"></i>
+            
+        </div>
+    </section>
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'nicewook-github-io';
+    var disqus_identifier = 'https:\/\/nicewook.github.io\/blog\/post\/hugo-meets-ghpages.html';
+    var disqus_title = 'hugo meets github pages';
+    var disqus_url = 'https:\/\/nicewook.github.io\/blog\/post\/hugo-meets-ghpages.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <section class="share">
+    <p class="backtotop"><a data-scroll href="#site-head"><i class="fa fa-lg fa-fw fa-angle-double-up"></i></a><a data-scroll class="backtotoptext" href="#site-head"> Back to top</a></p>
+    <p class="info prompt">Share</p>
+    <a href="http://twitter.com/share?text=hugo%20meets%20github%20pages&url=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fhugo-meets-ghpages.html" title="Share on Twitter"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="fa fa-2x fa-fw fa-twitter-square"></i> <span class="hidden">Twitter</span>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fhugo-meets-ghpages.html" title="Share on Facebook"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <i class="fa fa-2x fa-fw fa-facebook-square" style="margin-left: -8px"></i> <span class="hidden">Facebook</span>
+    </a>
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fhugo-meets-ghpages.html" title="Share on Google+"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <i class="fa fa-2x fa-fw fa-google-plus-square" style="margin-left: -8px"></i> <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    <footer class="post-footer">
+        <section class="author">
+    <div class="authorimage" style="background: url(https://nicewook.github.io/blog/img/avatar.jpg)"></div>
+    <h4>Jeong Hyunseok</h4>
+    <p class="bio"></p>
+    <p class="meta">
+      
+    </p>
+</section>
+    </footer>
+    
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </section>
+
+		<section class="copyright">&copy; 2017 <a href="https://nicewook.github.io/blog/">Jeong Hyunseok</a>. Released under the MIT license.</section>
+	</div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://nicewook.github.io/blog/js/index.js"></script>
+<script src="https://nicewook.github.io/blog/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>
