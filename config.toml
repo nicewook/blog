@@ -1,4 +1,4 @@
-baseurl = "http://nicewook.github.io/blog/"
+baseurl = "https://nicewook.github.io/blog/"
 languageCode = "en-us"
 title = "JustHS"
 theme = "hugo-steam-theme"
