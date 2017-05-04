@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>variational autoencoder &middot; JustHS</title>
+    <meta name="author" content="Jeong Hyunseok">
+    <meta name="description" content="JustHS blog">
+    <meta name="generator" content="Hugo 0.20.6" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="https://nicewook.github.io/blog/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://nicewook.github.io/blog/css/screen.css">
+    <link rel="stylesheet" href="https://nicewook.github.io/blog/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+    
+
+    
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #3498db;}
+    .pagination a {color: #3498db;}
+    .gist .gist-file .gist-meta a:visited {color: #3498db !important;}
+    a:focus, a:hover {color: #2079b4;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #2079b4;}
+    .older-posts:hover, .newer-posts:hover {color: #2079b4;}
+</style>
+</head>
+
+<body class="home-template">
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="https://nicewook.github.io/blog/">JustHS</a></h1>
+	
+	
+	<h1 class="blog-subtitle">software development</h1>
+	
+</header>
+    
+    
+    <main class="content" role="main">
+    
+<article class="post">
+    <header>
+        <h1 class="post-title">variational autoencoder</h1>
+        <div class="post-meta">
+            <time datetime="04 May 2017">
+                04 May 2017
+            </time>
+        </div>
+    </header>
+
+    <section class="post-content">
+        <hr />
+
+<p>variational autoencoder에 대해 쉽게 설명한 블로그를 찾아, 이해한 바를 바탕으로 정리, 요약해본다.</p>
+
+<pre><code>원문링크: http://kvfrans.com/variational-autoencoders-explained/
+원문깃헙: https://github.com/kvfrans/variational-autoencoder
+
+원문에서 참고한 블로그: https://jmetzen.github.io/2015-11-27/vae.html
+- 블로그 본문에서 .ipynb 구현파일을 다운로드 가능하다
+</code></pre>
+
+<hr />
+
+    </section>
+
+    
+    <section class="post-tags" style="padding-bottom:60px;">
+        <div class="post-meta tags">
+            <i class="fa fa-fw fa-tag"></i>
+            
+                
+                <a href="https://nicewook.github.io/blog/tags/vae">vae </a>
+            
+                
+                <a href="https://nicewook.github.io/blog/tags/deeplearning">deeplearning </a>
+            
+        </div>
+    </section>
+    
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'nicewook-github-io';
+    var disqus_identifier = 'https:\/\/nicewook.github.io\/blog\/post\/variational-autoencoder.html';
+    var disqus_title = 'variational autoencoder';
+    var disqus_url = 'https:\/\/nicewook.github.io\/blog\/post\/variational-autoencoder.html';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <section class="share">
+    <p class="backtotop"><a data-scroll href="#site-head"><i class="fa fa-lg fa-fw fa-angle-double-up"></i></a><a data-scroll class="backtotoptext" href="#site-head"> Back to top</a></p>
+    <p class="info prompt">Share</p>
+    <a href="http://twitter.com/share?text=variational%20autoencoder&url=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fvariational-autoencoder.html" title="Share on Twitter"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <i class="fa fa-2x fa-fw fa-twitter-square"></i> <span class="hidden">Twitter</span>
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fvariational-autoencoder.html" title="Share on Facebook"
+        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <i class="fa fa-2x fa-fw fa-facebook-square" style="margin-left: -8px"></i> <span class="hidden">Facebook</span>
+    </a>
+    <a href="https://plus.google.com/share?url=https%3a%2f%2fnicewook.github.io%2fblog%2fpost%2fvariational-autoencoder.html" title="Share on Google+"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <i class="fa fa-2x fa-fw fa-google-plus-square" style="margin-left: -8px"></i> <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    <footer class="post-footer">
+        <section class="author">
+    <div class="authorimage" style="background: url(https://nicewook.github.io/blog/img/avatar.jpg)"></div>
+    <h4>Jeong Hyunseok</h4>
+    <p class="bio"></p>
+    <p class="meta">
+      
+    </p>
+</section>
+    </footer>
+    
+</article>
+
+    </main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  </section>
+
+		<section class="copyright">&copy; 2017 <a href="https://nicewook.github.io/blog/">Jeong Hyunseok</a>. Released under the MIT license.</section>
+	</div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://nicewook.github.io/blog/js/index.js"></script>
+<script src="https://nicewook.github.io/blog/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-98366627-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>

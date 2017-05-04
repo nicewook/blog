@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Released under the MIT license.</copyright>
-    <lastBuildDate>Mon, 01 May 2017 02:16:56 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 04 May 2017 13:09:16 +0900</lastBuildDate>
     
 	<atom:link href="https://nicewook.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>variational autoencoder</title>
+      <link>https://nicewook.github.io/blog/post/variational-autoencoder.html</link>
+      <pubDate>Thu, 04 May 2017 13:09:16 +0900</pubDate>
+      
+      <guid>https://nicewook.github.io/blog/post/variational-autoencoder.html</guid>
+      <description>variational autoencoder에 대해 쉽게 설명한 블로그를 찾아, 이해한 바를 바탕으로 정리, 요약해본다.
+원문링크: http://kvfrans.com/variational-autoencoders-explained/ 원문깃헙: https://github.com/kvfrans/variational-autoencoder 원문에서 참고한 블로그: https://jmetzen.github.io/2015-11-27/vae.html - 블로그 본문에서 .ipynb 구현파일을 다운로드 가능하다  </description>
+    </item>
     
     <item>
       <title>hugo meets github pages</title>
