@@ -17,18 +17,6 @@
   </url>
   
   <url>
-    <loc>https://nicewook.github.io/blog/categories/deeplearning.html</loc>
-    <lastmod>2017-05-04T13:09:16+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nicewook.github.io/blog/tags/deeplearning.html</loc>
-    <lastmod>2017-05-04T13:09:16+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://nicewook.github.io/blog/</loc>
     <lastmod>2017-05-04T13:09:16+09:00</lastmod>
     <priority>0</priority>
@@ -42,19 +30,6 @@
   
   <url>
     <loc>https://nicewook.github.io/blog/tags.html</loc>
-    <lastmod>2017-05-04T13:09:16+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nicewook.github.io/blog/categories/vae.html</loc>
-    <lastmod>2017-05-04T13:09:16+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nicewook.github.io/blog/tags/vae.html</loc>
-    <lastmod>2017-05-04T13:09:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   

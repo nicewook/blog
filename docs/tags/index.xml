@@ -7,28 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Released under the MIT license.</copyright>
-    <lastBuildDate>Thu, 04 May 2017 13:09:16 +0900</lastBuildDate>
     
 	<atom:link href="https://nicewook.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Deeplearning</title>
-      <link>https://nicewook.github.io/blog/tags/deeplearning.html</link>
-      <pubDate>Thu, 04 May 2017 13:09:16 +0900</pubDate>
-      
-      <guid>https://nicewook.github.io/blog/tags/deeplearning.html</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vae</title>
-      <link>https://nicewook.github.io/blog/tags/vae.html</link>
-      <pubDate>Thu, 04 May 2017 13:09:16 +0900</pubDate>
-      
-      <guid>https://nicewook.github.io/blog/tags/vae.html</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
